@@ -1,0 +1,888 @@
+/* Sistema de Temas - Variáveis CSS */
+:root {
+  /* Tema Escuro (padrão) */
+  --cor-fundo: #0f0f1a;
+  --cor-sidebar: #161624;
+  --cor-cartao: #1e1e2f;
+  --cor-borda: #2a2a3d;
+  --cor-input: #3a3a5a;
+  --cor-fundo-input: #3a3a5a;
+  --cor-texto-input: #f5f5f5;
+  --cor-input-borda: #4a4a6a;
+
+  /* Texto */
+  --texto-principal: #f5f5f5;
+  --texto-notificacao: #000000;
+  --texto-secundario: #9ca3af;
+  --texto-placeholder: #dad3d3;
+  --texto-label: #efe3e3;
+
+  /* Ações */
+  --cor-primaria: #1a1aaf;
+  --cor-primaria-hover: #1a4195;
+  --cor-secondary: #2c2ebf;
+  --cor-secondary-hover: #03389a;
+  --cor-sucesso: #198754;
+  --cor-sucesso-hover: #1b553a;
+  --cor-perigo: #b7051f;
+  --cor-perigo-hover: #a01624;
+  --cor-link: #0ea5e9;
+
+  /* Sombras */
+  --sombra-cartao: 0 2px 4px rgba(0, 0, 0, 0.589);
+  --sombra-form: 0 0 10px rgba(0, 0, 0, 0.5);
+
+  /* Cores SideBar */
+  --color-primary: #5060f2;
+  --color-danger: #b30d1a;
+  --color-sucess: #41f1b6;
+  --color-warning: #ffbb55;
+  --color-white: #fff;
+  --color-info-dark: #a3aebd;
+  --color-info-light: #dce1ebs;
+  --color-dark: #363949;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --color-primary-variant: #111e88;
+  --color-dark-variant: #677483;
+  --color-backgroud: #f6f6f9;
+}
+
+/* Tema Claro */
+.light-theme {
+  --color-bg: #b8c6db;
+  --cor-fundo: #f0f2f4;
+  --cor-sidebar: #ffffff;
+  --cor-cartao: #ffffff;
+  --cor-borda: #e2dbdb;
+  --cor-input: #ffffff;
+  --cor-fundo-input: #ffffff;
+  --cor-texto-input: #222222;
+  --cor-input-borda: #d0d7e2;
+
+  --texto-principal: #1e293b;
+  --texto-notificacao: #000000;
+  --texto-secundario: #64748b;
+  --texto-label: #475569;
+  --texto-placeholder: #94a3b8;
+
+  --cor-primaria: #2563eb;
+  --cor-primaria-hover: #1d4ed8;
+  --cor-secondary: #3b82f6;
+  --cor-secondary-hover: #2563eb;
+  --color-info-dark: #272d34;
+
+  --cor-sucesso: #16a34a;
+  --cor-sucesso-hover: #15803d;
+  --cor-perigo: #dc2626;
+  --cor-perigo-hover: #b91c1c;
+
+  --sombra-cartao: 0 2px 4px hsla(0, 0%, 0%, 0.76);
+  --sombra-form: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Tema Escuro */
+.dark-theme {
+  --cor-fundo: #0f0f1a;
+  --color-bg: #102241;
+  --cor-sidebar: #161624;
+  --cor-cartao: #1e1e2f;
+  --cor-borda: #2a2a3d;
+  --cor-input: #3a3a5a;
+  --cor-fundo-input: #3a3a5a;
+  --cor-texto-input: #f5f5f5;
+  --cor-input-borda: #4a4a6a;
+
+  --texto-principal: #f5f5f5;
+  --texto-notificacao: #000000;
+  --texto-secundario: #9ca3af;
+  --texto-placeholder: #dad3d3;
+  --texto-label: #efe3e3;
+
+  --cor-primaria: #1a1aaf;
+  --cor-primaria-hover: #1a4195;
+  --cor-secondary: #2c2ebf;
+  --cor-secondary-hover: #03389a;
+
+  --cor-sucesso: #198754;
+  --cor-sucesso-hover: #1b553a;
+  --cor-perigo: #b7051f;
+  --cor-perigo-hover: #a01624;
+
+  --sombra-cartao: 0 2px 4px rgba(0, 0, 0, 0.589);
+  --sombra-form: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--texto-secundario);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-y: auto;
+}
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+}
+
+h1 {
+  color: var(--texto-principal);
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: var(--texto-principal);
+  line-height: 3.2rem;
+}
+
+h3 {
+  color: var(--texto-principal);
+}
+
+/* Formulários */
+.form-container {
+  background-color: var(--cor-cartao);
+  padding: 1.8rem;
+  line-height: 0.1rem;
+  border-radius: 20px;
+  box-shadow: var(--sombra-form);
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border: 1px solid var(--cor-borda);
+  transition: all 0.3s ease;
+}
+
+form label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  color: var(--texto-label);
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--cor-input-borda);
+  border-radius: 4px;
+  background-color: var(--cor-fundo-input);
+  color: var(--cor-texto-input);
+  transition: all 0.3s ease;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: var(--texto-placeholder);
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  outline: none;
+  border-color: var(--cor-primaria);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+form input.invalido {
+  border-color: #fca5a5;
+  background-color: #fff7f7;
+  color: #b91c1c;
+  transition: all 0.3s ease;
+}
+
+form input.invalido::placeholder {
+  color: #b91c1c;
+}
+
+#erro-email {
+  color: #b91c1c;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  display: block;
+}
+
+form button {
+  background-color: var(--cor-primaria);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+form button:hover {
+  background-color: var(--cor-primaria-hover);
+}
+
+.mensagem-erro {
+  color: #b91c1c;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Botões */
+.botao-primario,
+.botao-salvar,
+.botao-entrar,
+.botao-voltar-lista,
+.botao-cancelar-edicao {
+  width: 100%;
+  padding: 10px;
+}
+
+/* Responsividade para botões globais */
+@media (max-width: 500px) {
+
+  .botao-salvar-tarefa,
+  .botao-salvar-alteracoes,
+  .botao-editar-tarefa,
+  .botao-excluir,
+  .botao-cancelar,
+  .botao-editar,
+  .botao-concluir {
+    width: 100%;
+    max-width: none;
+    background-color: var(--cor-primaria);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+  }
+}
+
+
+.botao-primario:hover,
+.botao-salvar:hover,
+.botao-entrar:hover,
+.botao-voltar-lista:hover,
+.botao-cancelar-edicao:hover {
+  background-color: var(--cor-primaria-hover);
+}
+
+.botao-salvar-tarefa,
+.botao-salvar-alteracoes,
+.botao-editar-tarefa {
+  display: inline-block;
+  width: 200px;
+  /* Valor fixo para desktop */
+  background-color: var(--cor-sucesso);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.botao-salvar-tarefa:hover,
+.botao-salvar-alteracoes:hover,
+.botao-editar-tarefa:hover {
+  background-color: var(--cor-sucesso-hover);
+}
+
+.botao-editar {
+  display: inline-block;
+  width: 150px;
+  /* Valor fixo para desktop */
+  background-color: var(--cor-secondary);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.botao-editar:hover {
+  background-color: var(--cor-secondary-hover);
+}
+
+.botao-concluir {
+  display: inline-block;
+  width: 150px;
+  /* Valor fixo para desktop */
+  background-color: var(--cor-sucesso);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.botao-concluir:hover {
+  background-color: var(--cor-sucesso-hover);
+}
+
+.botao-excluir {
+  display: inline-block;
+  width: 150px;
+  /* Valor fixo para desktop */
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.botao-excluir:hover {
+  background-color: #c0392b;
+}
+
+.botao-cancelar {
+  display: inline-block;
+  width: 200px;
+  /* Valor fixo para desktop */
+  background-color: var(--cor-perigo);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.botao-cancelar:hover {
+  background-color: var(--cor-perigo-hover);
+}
+
+.botao-nova-tarefa {
+  background-color: var(--cor-primaria);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.botao-nova-tarefa:hover {
+  background-color: var(--cor-primaria-hover);
+}
+
+/* Texto */
+p {
+  margin-top: 20px;
+  color: var(--texto-principal);
+}
+
+p a {
+  color: var(--cor-link);
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.texto-login {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.texto-login a {
+  color: var(--cor-primaria);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.texto-login a:hover {
+  text-decoration: underline;
+}
+
+/* Dashboard - Estilos globais de layout */
+/* A responsividade do layout principal será gerenciada nos componentes Vue */
+
+/* Sidebar */
+/* Os estilos da sidebar foram movidos para o componente Sidebar.vue */
+
+aside .menu-navegacao a.active i {
+  color: var(--color-primary);
+  margin-left: calc(1rem - 3px);
+}
+
+aside .menu-navegacao a:hover {
+  color: var(--color-primary);
+}
+
+aside .menu-navegacao a:hover i {
+  margin-left: 1rem;
+}
+
+aside .menu-navegacao .message-count {
+  background: var(--color-danger);
+  color: var(--color-white);
+  padding: 2px 10px;
+  font-size: 11px;
+  border-radius: 4px;
+}
+
+.conteudo-principal {
+  flex: 1;
+  padding: 20px;
+  background: linear-gradient(180deg, var(--cor-sidebar), var(--color-bg));
+  transition: background-color 0.3s ease;
+  justify-content: space-between;
+  padding-top: 1rem;
+  width: 100%;
+  overflow-y: hidden;
+}
+
+.cabecalho-dashboard {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  font-size: small;
+  padding: 10px;
+  border: solid 1px var(--color-bg);
+  border-radius: 10px;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+.cabecalho-dashboard h1 {
+  color: var(--texto-principal);
+  margin: 0;
+  border-left: 2px solid var(--cor-primaria);
+  border-radius: 6px;
+  padding: 8px;
+}
+
+/* Cards de Tarefas */
+.grade-tarefas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+#listaTarefas {
+  display: contents;
+}
+
+.tarefas-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.cartao-tarefa {
+  background: var(--cor-cartao);
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  border: 2px solid var(--cor-borda);
+  color: var(--texto-principal);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.cartao-tarefa:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.108);
+}
+
+.cartao-tarefa.concluida {
+  opacity: 0.7;
+  border-color: var(--cor-sucesso);
+}
+
+.cabecalho-cartao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.cabecalho-cartao h3 {
+  color: var(--texto-principal);
+  margin: 0;
+}
+
+.acoes-tarefa {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.acoes-tarefa a,
+.acoes-tarefa button {
+  flex: 1;
+  min-width: 100px;
+  text-align: center;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 8px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.cartao-tarefa p {
+  color: var(--texto-secundario);
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+/* Ícone do olho */
+.icone-olho {
+  font-size: 1.8rem;
+  color: var(--texto-principal);
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.icone-olho .cheio {
+  display: none;
+}
+
+.icone-olho:hover .normal {
+  display: none;
+}
+
+.icone-olho:hover .cheio {
+  display: inline;
+}
+
+.icone-olho:hover {
+  color: var(--cor-primaria);
+}
+
+/* Detalhes da Tarefa */
+.cartao-detalhes,
+.formulario-tarefa {
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  border: 2px solid var(--cor-borda);
+}
+
+.formulario-container,
+.detalhes-container {
+  max-width: 100%;
+}
+
+.cartao-detalhes {
+  background-color: var(--cor-cartao);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: var(--sombra-cartao);
+  border: 1px solid var(--cor-borda);
+  transition: all 0.3s ease;
+}
+
+.titulo-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.titulo-status h2 {
+  color: var(--texto-principal);
+  margin: 0;
+}
+
+.status-pendente-detalhes {
+  background-color: #ffc107;
+  color: #000;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.campo-detalhes {
+  margin-bottom: 20px;
+}
+
+.campo-detalhes label {
+  display: block;
+  color: var(--texto-label);
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.campo-detalhes span {
+  color: var(--texto-principal);
+}
+
+.descricao-completa {
+  background-color: var(--cor-input);
+  padding: 15px;
+  border-radius: 4px;
+  border-left: 4px solid var(--cor-primaria);
+  border: 1px solid var(--cor-borda);
+}
+
+.descricao-completa p {
+  margin: 0;
+  color: var(--texto-principal);
+  line-height: 1.6;
+}
+
+.acoes-detalhes {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  justify-content: space-between;
+}
+
+.formulario-tarefa {
+  background-color: var(--cor-cartao);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: var(--sombra-cartao);
+  border: 1px solid var(--cor-borda);
+  transition: all 0.3s ease;
+}
+
+.campo-formulario {
+  margin-bottom: 20px;
+}
+
+.campo-formulario label {
+  display: block;
+  color: var(--texto-label);
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.campo-formulario input[type="text"],
+.campo-formulario textarea,
+.campo-formulario select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--cor-input-borda);
+  border-radius: 4px;
+  background-color: var(--cor-input);
+  color: var(--texto-principal);
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.campo-formulario input:focus,
+.campo-formulario textarea:focus,
+.campo-formulario select:focus {
+  outline: none;
+  border-color: var(--cor-primaria);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.campo-formulario input::placeholder,
+.campo-formulario textarea::placeholder {
+  color: var(--texto-placeholder);
+}
+
+.campo-formulario textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Notificações */
+.notificacao {
+  position: fixed;
+
+  left: 1.5rem;
+  padding: 15px 20px;
+  border-radius: 4px;
+  background-color: #4caf50;
+  color: white;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  max-width: 300px;
+}
+
+.notificacao.ativo {
+  opacity: 1;
+}
+
+.notificacao.saindo {
+  opacity: 0;
+}
+
+.notificacao.sucesso {
+  background-color: #4caf50;
+}
+
+.notificacao.erro {
+  background-color: #f44336;
+}
+
+.notificacao.alerta {
+  background-color: #ff9800;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal.ativo {
+  display: block;
+}
+
+.modal-content {
+  background-color: var(--cor-cartao);
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: var(--sombra-form);
+}
+
+.fechar-modal {
+  color: var(--texto-principal);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.fechar-modal:hover {
+  color: var(--cor-primaria);
+}
+
+/* Mensagens vazias */
+.sem-tarefas-container {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: var(--cor-cartao);
+  border-radius: 8px;
+  border: 1px dashed var(--cor-borda);
+}
+
+.sem-tarefas {
+  color: var(--texto-secundario);
+  font-size: 18px;
+}
+
+/* === Cores padrão (modo claro) === */
+:root {
+  --cor-fundo-input: #ffffff;
+  --cor-texto-input: #1c1c1c;
+  --cor-borda-input: #ccc;
+}
+
+/* === Cores no modo escuro === */
+[data-tema="escuro"] {
+  --cor-fundo-input: #2b2b3a;
+  --cor-texto-input: #f5f5f5;
+  --cor-borda-input: #3e3e52;
+}
+
+/* === Aparência base dos inputs === */
+input {
+  background-color: var(--cor-fundo-input);
+  color: var(--cor-texto-input);
+  border: 1px solid var(--cor-borda-input);
+  border-radius: 6px;
+  padding: 10px 12px;
+  width: 100%;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* === Remove o fundo azul padrão ao focar === */
+input:focus {
+  outline: none;
+  border-color: #4e5cfb;
+}
+
+/* === Corrige o autofill no Chrome, Edge e Safari === */
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px var(--cor-fundo-input) inset !important;
+  -webkit-text-fill-color: var(--cor-texto-input) !important;
+  caret-color: var(--cor-texto-input) !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* === Força o texto branco no modo escuro mesmo com autofill === */
+[data-tema="escuro"] input:-webkit-autofill {
+  -webkit-text-fill-color: #f5f5f5 !important;
+}
